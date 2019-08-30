@@ -1,0 +1,113 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+	    <title>Cuti Online</title>
+	    <!--Import Google Icon Font-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <!--Import materialize.css-->
+	    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+	    <!--Let browser know website is optimized for mobile-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <style type="text/css">
+			.efek {
+            	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	        }
+	        section, footer {
+            	padding: 20px 0px; 
+        	}
+        	.card-panel {
+        		margin-top: 40px;
+        	}
+          body {
+            background-image: url("img/parallax.png");
+            background-size: cover;
+          }
+          .ajukan{
+            margin-bottom: 20px;
+          }
+	    </style>
+
+
+    </head>
+
+
+    <body>
+    <div class="navbar-fixed">
+        <nav class="red darken-1">
+            <div class="container">
+                <div class="nav-wrapper">
+            <a href="#" data-target="sidenav" class="sidenav-trigger"><i class="material-icons" >menu</i></a>
+            <a href="index.html" class="brand-logo"  >Cuti Online</a>
+            <ul class="right hide-on-med-and-down">
+               <li class="active"><a href="permohonan_cuti.html" >Pengajuan</a></li>
+               <li><a href="view_cuti_sendiri.html" >Riwayat</a></li>
+               <li><a href="login.html" class="waves-effect waves-grey btn white black-text">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <ul class="sidenav black-text" id="sidenav">
+        <li style="margin-top:10px;" class="center"><img width=20% src="img/logo.png"></li>
+      <li><div class="divider"></div></li>
+        <li class="active"><a href="permohonan_cuti.html">Pengajuan</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="view_cuti_sendiri.html">Riwayat</a></li>
+        <li><div class="divider"></div></li>
+    </ul>
+
+    <section class="formulir">
+        <div class="container">
+            <h3 class="light center grey-text text-darken-3 efek">Form Cuti</h3>
+            <div class="row">
+              <div class=" card-panel col m8 push-m2 s12 center">
+                <div class="input-field">
+                  <i class="material-icons prefix">lock_outline</i>
+                  <input id="id" type="text" required>
+                  <label for="id">ID</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="nama" type="text" required>
+                  <label for="nama">Nama</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">today</i>
+                  <input id="mulai" type="text" class="datepicker" required>
+                  <label for="mulai">Tanggal Cuti</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">date_range</i>
+                  <input id="lama" type="text" required>
+                  <label for="lama">Lama Cuti</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">textsms</i>
+                  <input id="alasan" type="text" required>
+                  <label for="alasan">Alasan</label>
+                </div>
+                <button type="submit" class="waves-effect waves-light btn cyan ajukan">AJUKAN</button>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer grey darken-3">
+          <div class="container">
+              Copyright 2019 © SMK Telkom Malang TEFA Team. All rights reserved.
+              <a class="grey-text text-lighten-4 right" >Created By Cuti Online Team</a>
+          </div>
+    </footer>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+        const datePicker = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(datePicker);
+      </script>
+    </body>
+  </html>

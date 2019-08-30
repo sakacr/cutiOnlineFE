@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+	    <title>Cuti Online</title>
+	    <!--Import Google Icon Font-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <!--Import materialize.css-->
+	    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+	    <!--Let browser know website is optimized for mobile-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <style type="text/css">
+	    	.parallax-container {
+			    height: 425px;
+			}
+			.efek {
+            	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	        }
+	        section, footer {
+            	padding: 20px 0px; 
+        	}
+        	.card-panel {
+        		margin-top: 40px;
+        	}
+          body {
+            background-image: url("img/parallax.png");
+            background-size: cover;
+          }
+          footer {
+            margin-top: 145px;
+          }
+	    </style>
+
+
+    </head>
+
+
+    <body>
+    <div class="navbar-fixed">
+        <nav class="red darken-1">
+            <div class="container">
+                <div class="nav-wrapper">
+            <a href="#" data-target="sidenav" class="sidenav-trigger"><i class="material-icons" >menu</i></a>
+            <a href="admin.html" class="brand-logo"  >Cuti Online</a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="view_pegawai.html" >Daftar User</a></li>
+               <li class="active" ><a href="view_cuti_admin.html" >Daftar Cuti</a></li>
+               <li><a href="login.html" class="waves-effect waves-grey btn white black-text">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <ul class="sidenav black-text" id="sidenav">
+      <li style="margin-top:10px;" class="center"><img width=20% src="img/logo.png"></li>
+      <li><div class="divider"></div></li>
+      <li><a href="view_pegawai.html" >Daftar User</a></li>
+      <li><div class="divider"></div></li>
+      <li class="active" ><a href="view_cuti_admin.html" >Daftar Cuti</a></li>
+      <li><div class="divider"></div></li>
+    </ul>
+
+    <section class="">
+        <div class="container">
+            <h3 class="light center grey-text text-darken-3 efek">Daftar Pengajuan Cuti</h3>
+            <div class="row card-panel">
+              <div class="input-field col m4 s6 right">
+                <i class="material-icons prefix">search</i>
+                <input id="search" placeholder="search">
+                <div class="search-results"></div>
+              </div>
+              <table class="responsive-table highlight centered">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Pengajuan</th>
+                    <th>Mulai Cuti</th>
+                    <th>Lama Cuti</th>
+                    <th>Alasan</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>12121</td>
+                    <td>Dimas Angkasa</td>
+                    <td></td>
+                    <td></td>
+                    <td>12</td>
+                    <td>males</td>
+                    <td></td>
+                    <td>
+                      <a href="" class="waves-effect waves-light btn green lighten-1">TERIMA</a>
+                      <a href="" class="waves-effect waves-light btn amber darken-1">TOLAK</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </section>
+
+        <footer class="page-footer grey darken-3">
+          <div class="container">
+              Copyright 2019 © SMK Telkom Malang TEFA Team. All rights reserved.
+              <a class="grey-text text-lighten-4 right" >Created By Cuti Online Team</a>
+          </div>
+    </footer>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+        const datePicker = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(datePicker);
+      </script>
+    </body>
+  </html>

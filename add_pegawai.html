@@ -1,0 +1,161 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+	    <title>Cuti Online</title>
+	    <!--Import Google Icon Font-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <!--Import materialize.css-->
+	    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+	    <!--Let browser know website is optimized for mobile-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <style type="text/css">
+			.efek {
+            	text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	        }
+	        section, footer {
+            	padding: 20px 0px; 
+        	}
+        	.card-panel {
+        		margin-top: 40px;
+        	}
+          body {
+            background-image: url("img/parallax.png");
+            background-size: cover;
+          }
+          .ajukan{
+            margin-bottom: 10px;
+          }
+	    </style>
+
+
+    </head>
+
+
+    <body>
+    <div class="navbar-fixed">
+        <nav class="red darken-1">
+            <div class="container">
+                <div class="nav-wrapper">
+            <a href="#" data-target="sidenav" class="sidenav-trigger"><i class="material-icons" >menu</i></a>
+            <a href="admin.html" class="brand-logo"  >Cuti Online</a>
+            <ul class="right hide-on-med-and-down">
+               <li><a href="view_pegawai.html" >Daftar User</a></li>
+               <li><a href="view_cuti_admin.html" >Daftar Cuti</a></li>
+               <li><a href="login.html" class="waves-effect waves-grey btn white black-text">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <ul class="sidenav black-text" id="sidenav">
+      <li style="margin-top:10px;" class="center"><img width=20% src="img/logo.png"></li>
+      <li><div class="divider"></div></li>
+      <li><a href="view_pegawai.html" >Daftar User</a></li>
+      <li><div class="divider"></div></li>
+      <li><a href="view_cuti_admin.html" >Daftar Cuti</a></li>
+      <li><div class="divider"></div></li>
+    </ul>
+
+    <section class="formulir">
+        <div class="container">
+            <h3 class="light center grey-text text-darken-3 efek">ADD USER</h3>
+            <div class="row">
+              <div class=" card-panel center">
+                <div class="input-field">
+                  <i class="material-icons prefix">chevron_right</i>
+                  <input disabled value="" id="iduser" type="text" class="validate" required>
+                  <label for="iduser">USER ID</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">chevron_right</i>
+                  <input disabled value="" id="idpeg" type="text" class="validate" required>
+                  <label for="idpeg">ID Pegawai</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="nama" type="text" required>
+                  <label for="nama">Nama</label>
+                </div>
+                <div class="row">
+                  <label class="col m4">
+                    <input name="gender" type="radio" />
+                    <span>Laki Laki </span>
+                  </label>
+                  <label class="col m4">
+                    <input name="gender" type="radio" />
+                    <span>Perempuan </span>
+                  </label>
+                </div>
+                <div class="input-field row">
+                  <i class="material-icons prefix">location_on</i>
+                  <input id="tl" type="text" required>
+                  <label for="tl">Tempat Lahir</label>
+                </div>
+                <div class="input-field">
+                  <i class="material-icons prefix">today</i>
+                  <input id="ttl" type="text" class="datepicker" required>
+                  <label for="ttl">Tanggal Lahir</label>
+                </div>
+                <div class="row">
+                  <label class="col m2">
+                    <input name="agama" type="radio" />
+                    <span>Islam </span>
+                  </label>
+                  <label class="col m2">
+                    <input name="agama" type="radio" />
+                    <span>Kristen </span>
+                  </label>
+                  <label class="col m2">
+                    <input name="agama" type="radio" />
+                    <span>Katolik </span>
+                  </label>
+                  <label class="col m2">
+                    <input name="agama" type="radio" />
+                    <span>Hindu </span>
+                  </label>
+                  <label class="col m2">
+                    <input name="agama" type="radio" />
+                    <span>Budha </span>
+                  </label>
+                </div>
+                <div class="input-field row">
+                  <i class="material-icons prefix">phone_android</i>
+                  <input id="hp" type="text" required>
+                  <label for="hp">No. Telp</label>
+                </div>
+                <div class="input-field row">
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" required>
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-field row">
+                  <i class="material-icons prefix">lock_outline</i>
+                  <input id="pass" type="password" required>
+                  <label for="pass">Password</label>
+                </div>
+                <button type="submit" class="waves-effect waves-light btn cyan">TAMBAH</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer grey darken-3">
+          <div class="container">
+              Copyright 2019 © SMK Telkom Malang TEFA Team. All rights reserved.
+              <a class="grey-text text-lighten-4 right" >Created By Cuti Online Team</a>
+          </div>
+    </footer>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+        const datePicker = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(datePicker);
+      </script>
+    </body>
+  </html>
